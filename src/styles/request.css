@@ -1,0 +1,41 @@
+.requestBox{
+    margin-top: 3rem;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+}
+
+.txt_left{
+    background-color: #E0E4EE;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_right{
+    background-color: #353755;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_right h1{
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn_right button{
+    background-color: #5bd3c7;
+    padding: 0.5rem 2rem;
+}
+
+.btn_right button a{
+    text-decoration: none;
+    color: black;
+}

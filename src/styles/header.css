@@ -1,0 +1,24 @@
+.header{
+    background-color: black;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social_links{
+    display: flex;
+    align-items: center;
+}
+
+.social_links img{
+    width: 20px;
+    height: 20px;
+}
+
+.social_links a{
+    color: #707070;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-left: 0.4rem;
+}

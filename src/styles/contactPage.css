@@ -1,0 +1,66 @@
+.contactPage{
+    background-color: white;
+    height: 80vh;
+    width: 65%;
+    box-shadow: 0.5rem 0.75rem 1.5rem #a5a5a5;
+    display: flex;
+}
+
+.outer_Box{
+    background-color: rgb(239, 239, 239);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ill_sec{
+    background-color: #E0E4EE;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ill_sec img{
+    width: 80%;
+}
+
+.form_sec{
+    background-color: #353755;
+    width: 45%;
+    height: 100%;
+    padding: 2.5rem 4rem;
+}
+
+.form_sec h1{
+    color: #5bd3c7;
+    font-size: 3rem;
+    margin-left: 25%;
+}
+
+.form_contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_contact input, .msg{
+    background-color: white;
+    height: 1rem;
+    border-radius: 5px;
+}
+
+.msg{
+    height: 100%;
+}
+
+.submit_btn{
+    margin-top: 1rem;
+    background-color: #5bd3c7;
+    padding: 0.5rem 0;
+    width: 50%;
+    color: black;
+}

@@ -1,0 +1,38 @@
+.footer{
+    background-color: rgb(7, 7, 7);
+    height: 40vh;
+    padding: 3rem;
+}
+
+.footer_links{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer_section h3{
+    color: #8d8d8d;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.footer_section div{
+    margin-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.7rem;
+}
+
+.footer_section div a{
+    color: #7f7f7f;
+    text-decoration: none;
+}
+
+.social_icons{
+    margin-left: 68rem;
+    margin-top: 2rem;
+}
+
+.social_icons a img{
+    width: 30px;
+    margin: 0 1rem;
+}

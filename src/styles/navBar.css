@@ -1,0 +1,46 @@
+.navBar{
+    background-color: #353755;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 1.5rem 3rem;
+}
+
+.nav_links a{
+    color: white;
+    margin: 1rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav_links a:hover{
+    color: #c1c3d5;
+}
+
+.logo{
+    width: 2.8rem;
+    margin-bottom: 3px;
+}
+
+.logo_bg{
+    background-color: #5bd3c7;
+    width: 3.8rem;
+    height: 3.5rem; 
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainn_logo{
+    display: flex;
+    align-items: center;
+}
+
+.mainn_logo h3{
+    color: #5bd3c7;
+    font-size: 1.5rem;
+    margin-left: 0.8rem;
+}
