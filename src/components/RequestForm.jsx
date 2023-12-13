@@ -1,26 +1,8 @@
-import React, {useState} from 'react';
-import {Grid, Paper, Avatar, Typography, TextField, Button, RadioGroup, FormControlLabel, Radio, Checkbox, FormControl} from '@mui/material';
-import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, push } from 'firebase/database';
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
+import React, {useState, useEffect} from 'react';
+import {Grid, Paper, Typography, TextField, Button, RadioGroup, FormControlLabel, Radio, Checkbox, FormControl} from '@mui/material';
+import { ref, push } from 'firebase/database';
 import '../styles/requestForm.css';
-
-// Initialize Firebase with your config
-const firebaseConfig = {
-    apiKey: "AIzaSyBIL08YXBsalBbQQwLMAcxcWTJF3Hi0bk8",
-    authDomain: "bread-and-butter-6383f.firebaseapp.com",
-    databaseURL: "https://bread-and-butter-6383f-default-rtdb.firebaseio.com",
-    projectId: "bread-and-butter-6383f",
-    storageBucket: "bread-and-butter-6383f.appspot.com",
-    messagingSenderId: "46107145176",
-    appId: "1:46107145176:web:f0c654b61525fc767bb8ad",
-    measurementId: "G-55T342GB1T"
-  };
-  
-  const firebaseApp = initializeApp(firebaseConfig);
-  const database = getDatabase(firebaseApp);
-  const MySwal = withReactContent(Swal);
+import {auth, database, MySwal} from '../firebase';
 
 const RequestForm = () => {
 
@@ -79,20 +61,31 @@ const RequestForm = () => {
     MySwal.fire("Success", "Request has been generated successfully.", "success");
   };
 
+    useEffect(()=>{
+        auth.onAuthStateChanged((user)=>{
+          if(user){
+            setName(user.displayName);
+            setEmail(user.email);
+          }else{
+            setName("");
+            setEmail("");
+          }
+        });
+      }, []);
+
   return (
     <div className='outermost_box'>
     <div className='requestForm'>
         <Grid>
         <Paper className='paper_form' >
         <Grid align='center'>
-          <h2 style={headerStyle}>Generate a Request</h2>
+          <h3 style={headerStyle}>Generate Request</h3>
           <Typography variant='caption' gutterBottom>Please fill this form to create a request!</Typography>
         </Grid>
         <form className='main_form' onSubmit={handleSubmit}>
           <TextField fullWidth label='Name' name="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" />
           <TextField fullWidth label='Email' name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" />
           <FormControl component="fieldset" style={marginTop}>
-            <Typography variant="subtitle1">Food Type</Typography>
             <RadioGroup aria-label="Food Type" name="foodType" value={foodType} onChange={handleFoodTypeChange} row>
               <FormControlLabel value="Fast Food" control={<Radio />} label="Fast Food" />
               <FormControlLabel value="Regular Food" control={<Radio />} label="Regular Food" />

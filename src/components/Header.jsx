@@ -10,19 +10,19 @@ const Header = () => {
     <header className='header'>
         <div className='social_links'>
             <img src={facebook} alt="facebook" />
-            <a href="">facebook/bread&butter.com</a>
+            <a href="">facebook/sharebite</a>
         </div>
         <div className='social_links'>
             <img src={youtube} alt="youtube" />
-            <a href="">youtube/bread&butter.com</a>
+            <a href="https://www.youtube.com/@ShareBiteOfficail">youtube/sharebite</a>
         </div>
         <div className='social_links'>
             <img src={linkedin} alt="linkedin" />
-            <a href="">linkedin/bread&butter.com</a>
+            <a href="">linkedin/sharebite</a>
         </div>
         <div className='social_links'>
             <img src={twitter} alt="twitter" />
-            <a href="">twitter/bread&butter.com</a>
+            <a href="">twitter/sharebite</a>
         </div>
     </header>
   )

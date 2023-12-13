@@ -1,0 +1,40 @@
+.AccountInfo{
+    background-color: #E0E4EE;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accBox{
+    padding: 5rem 2rem;
+    background-color: #353755;
+    height: 50vh;
+    width: 50vh;
+    box-shadow: 0.5rem 0.75rem 1.5rem #a5a5a5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accBox h2, h4{
+    color: white;
+}
+
+.accBox h4{
+    font-weight: 300;
+}
+
+.logOutBtn{
+    margin-top: 2rem;
+    background-color: #5bd3c7;
+    height: 2.7rem;
+    width: 7rem;
+    border-radius: 5px;
+    color: black;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}

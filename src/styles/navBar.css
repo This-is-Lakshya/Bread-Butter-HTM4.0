@@ -44,3 +44,10 @@
     font-size: 1.5rem;
     margin-left: 0.8rem;
 }
+
+#login__name{
+    background-color: #5bd3c7;
+    border-radius: 5rem;
+    padding: 0.3rem 1rem;
+    color: black;
+}

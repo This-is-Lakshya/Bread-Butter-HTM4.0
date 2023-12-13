@@ -5,17 +5,33 @@ import HomePage from './pages/HomePage';
 import Header from './components/Header';
 import NavBar from './components/NavBar';
 import Footer from './components/footer';
-import './App.css';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import RequestForm from './components/RequestForm';
+import './App.css';
+
+import {auth} from './firebase';
+import { useEffect, useState } from 'react';
+import AccountInfo from './pages/AccountInfo';
 
 function App() {
+
+  const [username, setUsername] = useState("");
+  useEffect(()=>{
+    auth.onAuthStateChanged((user)=>{
+      if(user){
+        setUsername((user.displayName).toUpperCase());
+      }else{
+        setUsername("");
+      }
+    });
+  }, []);
+
   return (
     <>
       <BrowserRouter>
         <Header />
-        <NavBar />
+        <NavBar name={username} />
 
         <Routes>
           <Route path='/' element={<HomePage />} />
@@ -24,6 +40,7 @@ function App() {
           <Route path='/about' element={<AboutPage />} />
           <Route path='/contact' element={<ContactPage />} />
           <Route path='/makerequest' element={<RequestForm />} />
+          <Route path='/accountInfo' element={<AccountInfo />} />
         </Routes>
 
         <Footer />
